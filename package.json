@@ -1,0 +1,40 @@
+{
+    "name": "mip-builder",
+    "description": "Builder for MIP and MIP Extension",
+    "version": "1.0.0",
+
+    "keywords": [
+        "mip",
+        "tool",
+        "build"
+    ],
+
+    "files": [
+        "lib",
+        "index.js"
+    ],
+
+    "dependencies": {
+        "mkdirp": "^0.5.1",
+        "object-assign": "^4.1.0",
+        "minimatch": "^3.0.3",
+        "iconv-lite": "^0.4.13",
+        "mip-processor": "^1.0.0"
+    },
+
+    "engines": {
+        "node": ">= 4.0.0"
+    },
+
+    "contributors": [
+        { "name": "erik", "email": "errorrik@gmail.com" }
+    ],
+
+    "main": "index.js",
+
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mipengine/mip-builder.git"
+    }
+}
