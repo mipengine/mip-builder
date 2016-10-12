@@ -19,7 +19,7 @@
         "object-assign": "^4.1.0",
         "minimatch": "^3.0.3",
         "iconv-lite": "^0.4.13",
-        "mip-processor": "^1.0.0"
+        "mip-processor": "^1.1.0"
     },
 
     "devDependencies": {
