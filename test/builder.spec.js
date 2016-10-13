@@ -50,7 +50,7 @@ describe("Builder", function () {
             });
 
             done();
-        });
+        }).catch(function (e){console.log(e)});
     });
 
     it("prepare will load all files which select by files option", function (done) {
@@ -179,7 +179,7 @@ describe("Builder", function () {
 
                 rmdir(path.resolve(__dirname, 'dist'));
                 done();
-            });
+            }).catch(function (e) {console.log(e)});
     });
 
     it("build method will do prepare、process and output", function (done) {
