@@ -36,13 +36,30 @@ function fileExists(file) {
 
 describe("Builder", function () {
 
+    it("prepare will exclude hidden file by default", function (done) {
+        var builder = new Builder({
+            dir: path.resolve(__dirname, 'target'),
+
+            files: []
+        });
+
+        builder.prepare().then(function () {
+            var files = builder.getFiles();
+            files.forEach(function (file) {
+                expect(file.fullPath.indexOf('editorconfig')).toBe(-1);
+            });
+
+            done();
+        });
+    });
+
     it("prepare will load all files which select by files option", function (done) {
         var builder = new Builder({
             dir: path.resolve(__dirname, 'target'),
 
             files: [
                 '!README.md',
-                '!dist/**/*'
+                '!demo/**/*'
             ]
         });
 
@@ -50,7 +67,7 @@ describe("Builder", function () {
             var files = builder.getFiles();
             files.forEach(function (file) {
                 expect(file.fullPath.indexOf('README')).toBe(-1);
-                expect(file.fullPath.indexOf('dist')).toBe(-1);
+                expect(file.fullPath.indexOf('demo')).toBe(-1);
             });
 
             done();
@@ -63,7 +80,7 @@ describe("Builder", function () {
 
             files: [
                 '!README.md',
-                '!dist/**/*'
+                '!demo/**/*'
             ]
         });
 
@@ -88,7 +105,7 @@ describe("Builder", function () {
 
             files: [
                 '!README.md',
-                '!dist/**/*'
+                '!demo/**/*'
             ],
 
             processors: [
@@ -124,7 +141,7 @@ describe("Builder", function () {
 
             files: [
                 '!README.md',
-                '!dist/**/*'
+                '!demo/**/*'
             ],
 
             processors: [
@@ -171,7 +188,7 @@ describe("Builder", function () {
 
             files: [
                 '!README.md',
-                '!dist/**/*'
+                '!demo/**/*'
             ],
 
             processors: [
