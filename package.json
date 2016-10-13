@@ -1,7 +1,7 @@
 {
     "name": "mip-builder",
     "description": "Builder for MIP and MIP Extension",
-    "version": "1.1.0",
+    "version": "1.1.1",
 
     "keywords": [
         "mip",
