@@ -1,7 +1,7 @@
 {
     "name": "mip-builder",
     "description": "Builder for MIP and MIP Extension",
-    "version": "1.2.2",
+    "version": "1.2.3",
 
     "keywords": [
         "mip",
@@ -19,7 +19,7 @@
         "object-assign": "^4.1.0",
         "minimatch": "^3.0.3",
         "iconv-lite": "^0.4.13",
-        "mip-processor": "^1.2.0"
+        "mip-processor": "^1.2.1"
     },
 
     "devDependencies": {
